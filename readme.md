@@ -95,7 +95,7 @@ All options can be toggled at configure time with -D<OPTION>=ON/OFF.
 CTest is enabled when BUILD_TESTING is ON (default via include(CTest)). If tests/CMakeLists.txt exists, it will be added automatically. Typical structure:
 - tests/
   - CMakeLists.txt
-  - "<your test sources>"
+  - your test sources
 
 Run tests with:
 - ctest --preset <your-configure-preset>
