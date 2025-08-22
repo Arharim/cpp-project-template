@@ -1,0 +1,273 @@
+# Modern C++ .clang-format configuration
+# Based on LLVM style with modern C++ enhancements
+
+BasedOnStyle: LLVM
+
+# Language and Standard
+Language: Cpp
+Standard: c++20
+
+# Indentation
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ContinuationIndentWidth: 4
+IndentCaseLabels: true
+IndentGotoLabels: true
+IndentPPDirectives: BeforeHash
+IndentExternBlock: AfterExternBlock
+IndentRequires: true
+
+# Access modifiers
+AccessModifierOffset: -2
+
+# Alignment
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: None
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Right
+AlignOperands: Align
+AlignTrailingComments: true
+
+# Allow short constructs on single line
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: All
+AllowShortLoopsOnASingleLine: false
+
+# Always break
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: Yes
+
+# Binary operators
+BreakBeforeBinaryOperators: NonAssignment
+
+# Braces
+BreakBeforeBraces: Attach
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# Breaking
+BreakAfterJavaFieldAnnotations: false
+BreakArrays: true
+BreakBeforeConceptDeclarations: true
+BreakBeforeInheritanceComma: false
+BreakInheritanceList: BeforeColon
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakStringLiterals: true
+
+# Column limit
+ColumnLimit: 100
+
+# Comments
+CommentPragmas: '^ IWYU pragma:'
+FixNamespaceComments: true
+ReflowComments: true
+
+# Compact namespaces
+CompactNamespaces: false
+
+# Constructor initializers
+ConstructorInitializerIndentWidth: 4
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+
+# Derive pointer alignment
+DerivePointerAlignment: false
+
+# Empty lines
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1
+
+# Includes
+IncludeBlocks: Regroup
+SortIncludes: CaseSensitive
+SortUsingDeclarations: true
+
+# Include categories for proper sorting
+IncludeCategories:
+  # Main header (if exists)
+  - Regex: '^".*\.h"$'
+    Priority: 1
+    SortPriority: 1
+  # Project headers
+  - Regex: '^".*"$'
+    Priority: 2
+    SortPriority: 2
+  # System C++ headers
+  - Regex: '^<[a-z_]+>$'
+    Priority: 3
+    SortPriority: 3
+  # System C headers
+  - Regex: '^<.*\.h>$'
+    Priority: 4
+    SortPriority: 4
+  # Other system headers
+  - Regex: '^<.*>$'
+    Priority: 5
+    SortPriority: 5
+
+# Java style
+JavaScriptQuotes: Leave
+JavaScriptWrapImports: true
+
+# Macros
+MacroBlockBegin: ''
+MacroBlockEnd: ''
+
+# Namespace indentation
+NamespaceIndentation: None
+
+# Penalties (for line breaking decisions)
+PenaltyBreakAssignment: 2
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakOpenParenthesis: 0
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 1000000
+PenaltyIndentedWhitespace: 0
+PenaltyReturnTypeOnItsOwnLine: 200
+
+# Pointer and reference alignment
+PointerAlignment: Left
+ReferenceAlignment: Pointer
+
+# Qualifiers
+QualifierAlignment: Leave
+
+# Raw string formats
+RawStringFormats:
+  - Language: Cpp
+    Delimiters:
+      - cc
+      - CC
+      - cpp
+      - Cpp
+      - CPP
+      - 'c++'
+      - 'C++'
+    CanonicalDelimiter: ''
+    BasedOnStyle: google
+  - Language: TextProto
+    Delimiters:
+      - pb
+      - PB
+      - proto
+      - PROTO
+    EnclosingFunctions:
+      - EqualsProto
+      - EquivToProto
+      - PARSE_PARTIAL_TEXT_PROTO
+      - PARSE_TEST_PROTO
+      - PARSE_TEXT_PROTO
+      - ParseTextOrDie
+      - ParseTextProtoOrDie
+      - ParseTestProto
+      - ParsePartialTestProto
+    CanonicalDelimiter: pb
+    BasedOnStyle: google
+
+# Remove braces
+RemoveBracesLLVM: false
+
+# Requires clause position
+RequiresClausePosition: OwnLine
+
+# Separator definition penalty
+SeparateDefinitionBlocks: Leave
+
+# Short namespace lines
+ShortNamespaceLines: 1
+
+# Sort includes
+SortJavaStaticImport: Before
+
+# Spaces
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: true
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeParensOptions:
+  AfterControlStatements: true
+  AfterForeachMacros: true
+  AfterFunctionDefinitionName: false
+  AfterFunctionDeclarationName: false
+  AfterIfMacros: true
+  AfterOverloadedOperator: false
+  BeforeNonEmptyParentheses: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: Never
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: true
+SpacesInCStyleCastParentheses: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# Disable formatting for specific regions
+DisableFormat: false
+ForEachMacros:
+  - foreach
+  - Q_FOREACH
+  - BOOST_FOREACH
+
+# If macros
+IfMacros:
+  - KJ_IF_MAYBE
+
+# Statement macros
+StatementMacros:
+  - Q_UNUSED
+  - QT_REQUIRE_VERSION
+
+# Type macros
+TypenameMacros:
+  - STACK_OF
+  - LIST
+
+# Whitespace sensitive macros
+WhitespaceSensitiveMacros:
+  - STRINGIZE
+  - PP_STRINGIZE
+  - BOOST_PP_STRINGIZE
+  - NS_SWIFT_NAME
+  - CF_SWIFT_NAME

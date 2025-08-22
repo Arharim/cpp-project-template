@@ -1,0 +1,127 @@
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+*.orig
+*.rej
+
+# Common build directories
+build/
+build-*/
+cmake-build-*/
+bin/
+lib/
+obj/
+out/
+dist/
+Debug/
+Release/
+x64/
+x86/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+Testing/
+CTestTestfile.cmake
+_DartConfiguration.tcl
+compile_commands.json
+compile_flags.txt
+
+# Ninja
+.ninja_deps
+.ninja_log
+
+# Compiler/Linker artifacts
+*.d
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Debug/Profiling/Sanitizers/Coverage
+*.pdb
+*.idb
+*.ilk
+*.dSYM/
+*.su
+*.stackdump
+*.gcno
+*.gcda
+*.gcov
+*.profraw
+*.profdata
+coverage/
+lcov.info
+sanitizer-*.log
+
+# Language servers / tooling caches
+.ccls
+.ccls-cache/
+.clangd/
+.clang-tidy-cache
+.cache/
+
+# IDEs / Editors
+.vscode/
+.idea/
+.vscode-test/
+.vs/
+.qodo/
+*.code-workspace
+*.iml
+
+# Qt/CLion user files
+*.pro.user
+*.pri.user
+*.qbs.user
+*.qmlc
+*.jsc
+.qmake.stash
+
+# Package managers / external deps (optional)
+.conan/
+conanbuildinfo.*
+conaninfo.txt
+conan.lock
+conanfile.lock
+vcpkg_installed/
+vcpkg_downloads/
+vcpkg_buildtrees/
+vcpkg_packages/
+
+# Other build systems
+.bazel-*
+bazel-*
+.sconsign.dblite
+
+# Logs
+logs/
+*.log
+
+# Virtual envs (for tooling/scripts)
+.venv/
+venv/
+
+# Node (if using JS tooling in repo)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

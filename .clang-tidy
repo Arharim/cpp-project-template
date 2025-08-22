@@ -1,0 +1,44 @@
+Checks: >
+  -*,
+  clang-analyzer-*,
+  security-*,
+  
+  bugprone-*,
+  performance-*,
+  readability-*,
+  modernize-*,
+
+  misc-*,
+  portability-*,
+  cppcoreguidelines-*,
+  cert-*,
+
+  -modernize-use-trailing-return-type,
+  -modernize-use-auto,
+  -readability-identifier-length,
+  -readability-identifier-naming,
+  -readability-magic-numbers,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay,
+  -cppcoreguidelines-owning-memory,
+  -cppcoreguidelines-no-malloc,
+  -readability-avoid-const-params-in-decls
+
+WarningsAsErrors: 'clang-analyzer-*,bugprone-*,security-*'
+
+HeaderFilterRegex: '^(?!.*(third_party|third-party|external|extern|vendor|build|dist|out)/).*'
+
+FormatStyle: file
+
+CheckOptions:
+  - key: performance-for-range-copy.WarnOnAllAutoCopies
+    value: '1'
+
+  - key: modernize-use-nodiscard.ReplacementString
+    value: '[[nodiscard]]'
+
+  - key: modernize-use-nullptr.NullMacros
+    value: 'NULL,nil'
+
+  - key: modernize-use-override.IgnoreDestructors
+    value: '1'
